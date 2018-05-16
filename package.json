@@ -1,0 +1,11 @@
+{
+  "name": "secret",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/annapervushina/secret.git",
+  "author": "Aleksandr Shestakov <akasybe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

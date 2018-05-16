@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тебе</title>
+  <style>
+    html, body {
+      margin: 0 auto;
+      background: #BBB4B6;
+    }
+
+    .slide1, .slide2, .slide3 {
+      text-align: center;
+      padding: 100px 0 0 0;
+      cursor: pointer;
+      transition: all .3s;
+    }
+
+    .slide1.on {
+      -webkit-animation: slideIn .5s ease-in-out both;
+              animation: slideIn .5s ease-in-out both;
+    }
+    .slide2.off {
+      -webkit-animation: slideOut .5s ease-in-out both;
+              animation: slideOut .5s ease-in-out both;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script>
+      $(document ).ready(function() {
+        $("#slide1").click(function () {
+          $('#slide1').fadeOut();
+          $('#slide2').fadeIn();
+        });
+
+        $("#slide2").click(function () {
+          $('#slide2').fadeOut();
+          $('#slide1').fadeIn();
+        });
+    });
+  </script>
+</head>
+<body>
+  <div id="slide1" class="slide1">
+      <img src="part1.png" width="80%"/>
+  </div>
+  <div id="slide2" class="slide2" style="display: none">
+      <img src="part2.png" width="80%"/>
+  </div>
+</body>
+</html>
